@@ -1,0 +1,191 @@
+/**
+ * СТИЛІ БІЖУЧОЇ СТРІЧКИ (120 FPS), ТЕМИ ТА ЕФЕКТУ КРАПЛІ
+ * «Ідеал» ремонт комп'ютерної техніки (м. Обухів)
+ */
+
+:root {
+  --brand-primary: #ea580c;
+  --brand-amber: #f59e0b;
+  --brand-yellow: #facc15;
+  --brand-bg: #fffdfa;
+}
+
+/* Переливаючий анімований градієнт верхньої плашки (120 FPS GPU) */
+.top-bar-shimmer {
+  background: linear-gradient(90deg, #d97706 0%, #f59e0b 25%, #fbbf24 50%, #f59e0b 75%, #d97706 100%);
+  background-size: 200% 100%;
+  animation: shimmerFlow 5s ease-in-out infinite alternate;
+  will-change: background-position;
+}
+
+@keyframes shimmerFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+html.dark .top-bar-shimmer {
+  background: linear-gradient(90deg, #9a3412 0%, #c2410c 25%, #d97706 50%, #b45309 75%, #9a3412 100%) !important;
+  background-size: 200% 100%;
+}
+
+/* Анімація капли, що розтікається по сайту (120 FPS View Transitions API) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+  will-change: clip-path;
+  transform: translateZ(0);
+}
+
+/* Плавний повільний перехід заливки для елементів */
+html, body, header, section, div, p, h1, h2, h3, h4, span, a, button {
+  transition: background-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              fill 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Темна тема: гарантована зміна фону */
+html.dark body {
+  background-color: #020617 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark #heroSection {
+  background: linear-gradient(to bottom, #0f172a 0%, #020617 100%) !important;
+  border-color: #1e293b !important;
+}
+
+html.dark header {
+  background-color: rgba(15, 23, 42, 0.95) !important;
+  border-color: #1e293b !important;
+}
+
+html.dark #servicesSection {
+  background-color: #020617 !important;
+  border-color: #1e293b !important;
+}
+
+html.dark .service-card {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+html.dark .service-card h4 {
+  color: #f8fafc !important;
+}
+html.dark .service-card p {
+  color: #94a3b8 !important;
+}
+
+html.dark .step-card {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+html.dark .step-card h4 {
+  color: #f8fafc !important;
+}
+html.dark .step-card p {
+  color: #94a3b8 !important;
+}
+
+html.dark #reviewsSection {
+  background-color: rgba(15, 23, 42, 0.4) !important;
+  border-color: #1e293b !important;
+}
+
+html.dark .review-card {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+}
+html.dark .review-card .text-slate-900 {
+  color: #f8fafc !important;
+}
+html.dark .review-card .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+html.dark .review-card .border-slate-100 {
+  border-color: #1e293b !important;
+}
+
+html.dark #contactsSection {
+  background-color: #020617 !important;
+}
+
+/* Безшовні плавні keyframes для біжучих ліній (120 FPS GPU, без зникнення відгуків) */
+@keyframes marquee-to-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes marquee-to-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+  contain: paint;
+  /* Додано відступи для того, щоб картки не обрізались при піднятті */
+  padding: 16px 0;
+  margin: -16px 0;
+}
+
+.marquee-row-left,
+.marquee-row-right {
+  display: flex;
+  gap: 1.25rem;
+  width: max-content;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.marquee-row-left {
+  animation: marquee-to-left 120s linear infinite;
+}
+
+.marquee-row-right {
+  animation: marquee-to-right 132s linear infinite;
+}
+
+/* Анімація послуг та відгуків */
+.service-card, .review-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0) translateY(0) scale(1);
+  /* Крива повернення: дуже повільно на початку, пришвидшується в кінці (ease-in) для transform. Інші властивості - звичайно */
+  transition: transform 0.6s cubic-bezier(0.5, 0, 1, 0.5), border-color 0.3s ease, background-color 0.3s ease;
+  will-change: transform;
+}
+
+.service-card:hover {
+  transform: translateZ(0) scale(1.04);
+  /* Швидке плавне підняття при наведенні */
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, background-color 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.review-card:hover {
+  transform: translateZ(0) translateY(-8px) scale(1.03);
+  /* Швидке плавне підняття при наведенні */
+  transition: transform 0.25s cubic-bezier(0.25, 0.8, 0.25, 1), border-color 0.3s ease, background-color 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
