@@ -39,7 +39,7 @@ function initThemeToggle() {
   let saved = null;
   try { saved = localStorage.getItem('ideal_theme'); } catch(e) {}
   
-  if (saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+  if (saved === 'dark') {
     applyTheme(true);
   } else {
     applyTheme(false);
