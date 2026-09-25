@@ -8,8 +8,10 @@
   
   <script>
     try {
-      if (localStorage.getItem('ideal_theme') === 'dark' || (!localStorage.getItem('ideal_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      if (localStorage.getItem('ideal_theme') === 'dark') {
         document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
       }
     } catch(e) {}
   </script>
@@ -64,12 +66,11 @@
     </div>
   </div>
 
-  <!-- HEADER -->
   <header class="bg-white dark:bg-slate-900 border-b border-amber-200/80 dark:border-slate-800 shadow-xs sticky top-0 z-40 transition-colors">
-    <div class="max-w-7xl mx-auto px-4 py-3 sm:py-2.5 grid grid-cols-1 sm:grid-cols-3 items-center gap-4 sm:gap-2">
+    <div class="header-grid max-w-7xl mx-auto px-4 py-3 sm:py-2.5 grid grid-cols-1 sm:grid-cols-3 items-center gap-4 sm:gap-2">
       
       <!-- Зліва: Соціальні мережі -->
-      <div class="flex items-center justify-center order-2 sm:order-1 gap-3">
+      <div class="mobile-hide flex items-center justify-center order-2 sm:order-1 gap-3">
         <a href="https://www.facebook.com/ideal.komp.uteri/" target="_blank" class="px-4 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 text-xs font-bold transition border border-blue-200 dark:border-blue-900 hover:bg-blue-100 shadow-xs">
           Facebook
         </a>
@@ -86,7 +87,7 @@
       </div>
 
       <!-- Справа: Номер та адреса -->
-      <div class="flex flex-col items-center justify-center order-3 gap-1.5 text-center">
+      <div class="mobile-hide flex flex-col items-center justify-center order-3 gap-1.5 text-center">
         <a href="tel:+380985520500" class="px-6 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs transition shadow-xs">
           098-552-05-00
         </a>

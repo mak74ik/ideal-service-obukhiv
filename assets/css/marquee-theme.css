@@ -189,3 +189,18 @@ html.dark #contactsSection {
   z-index: 10;
   position: relative;
 }
+
+/* Згортання шапки на мобільному при скролі */
+@media (max-width: 639px) {
+  header.is-scrolled .mobile-hide {
+    display: none !important;
+  }
+  header.is-scrolled .header-grid {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    gap: 0 !important;
+  }
+  header {
+    transition: all 0.3s ease;
+  }
+}
