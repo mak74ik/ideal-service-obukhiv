@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>«Ідеал» Обухів | Комп'ютерна техніка та сервіс</title>
+  <meta name="description" content="Салон-магазин та сервіс «Ідеал» в Обухові (вул. Київська, 113/3). Чистка та ремонт ПК, ноутбуків, консолей. Досвід • Якість • Швидкість.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/marquee-theme.css">
+</head>
+<body class="bg-[#fefcf8] text-slate-800 antialiased flex flex-col justify-between min-h-screen selection:bg-amber-200">
+
+  <!-- TOP BAR -->
+  <div class="bg-amber-500 text-white py-2 px-4 text-xs font-bold tracking-wide">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2">
+        <span class="uppercase tracking-widest text-[11px] font-black">ДОСВІД • ЯКІСТЬ • ШВИДКІСТЬ</span>
+        <span class="text-amber-200">|</span>
+        <span>м. Обухів, вул. Київська, 113/3</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs">
+        <span>Графік: Пн-Пт 10:00-17:00, Сб 10:00-16:00, Нд 10:00-15:00</span>
+        <span class="bg-white/20 px-2 py-0.5 rounded text-[11px]">Рейтинг 4.7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white border-b border-amber-200/80 shadow-xs sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-amber-500 text-white flex items-center justify-center font-black text-2xl shadow-xs">
+          i
+        </div>
+        <div>
+          <span class="text-xl font-black text-slate-950">ІДЕАЛ</span>
+          <p class="text-xs text-slate-500">Комп'ютерна техніка • вул. Київська, 113/3</p>
+        </div>
+      </a>
+
+      <div class="flex items-center gap-2 sm:gap-3">
+        <a href="https://www.facebook.com/ideal.komp.uteri/" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-blue-50 text-blue-800 text-xs font-bold transition border border-blue-200">
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/salon_magazin_ideal/" target="_blank" class="px-2.5 py-1.5 rounded-lg bg-pink-50 text-pink-800 text-xs font-bold transition border border-pink-200">
+          Instagram
+        </a>
+        <a href="tel:+380985520500" class="px-3.5 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs transition shadow-xs">
+          098-552-05-00
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- HERO: INTERACTIVE MATRIX -->
+    <section class="py-12 md:py-16 bg-gradient-to-b from-amber-50/60 to-[#fefcf8] border-b border-amber-200/60">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <div class="inline-block px-3 py-1 rounded-md bg-amber-100 text-amber-950 text-xs font-bold uppercase tracking-wider mb-3 border border-amber-300">
+            Обухів • вул. Київська, 113/3
+          </div>
+          <h1 class="text-3xl sm:text-5xl font-black text-slate-950 tracking-tight leading-tight">
+            ЧИСТКА ТА РЕМОНТ НОУТБУКІВ ТА КОМП'ЮТЕРІВ!
+          </h1>
+          <p class="text-slate-600 text-sm sm:text-base mt-2">
+            Професійна чистка та ремонт для стабільної роботи вашої техніки. Оберіть категорію нижче:
+          </p>
+        </div>
+
+        <!-- SYMPTOM MATRIX (Without emojis!) -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-3.5 mb-8">
+          
+          <button onclick="selectSymptom('overheat')" class="symptom-btn active text-left p-4 rounded-xl bg-white border-2 border-amber-400 shadow-xs transition">
+            <div class="text-xs font-black uppercase text-amber-900 tracking-wider mb-1">Перегрів та шум</div>
+            <div class="text-sm font-bold text-slate-900">Чистка від пилу та системи охолодження</div>
+            <div class="text-xs text-slate-500 mt-0.5">ПК, ноутбуки та ігрові консолі</div>
+          </button>
+
+          <button onclick="selectSymptom('slow')" class="symptom-btn text-left p-4 rounded-xl bg-white border border-amber-200 hover:border-amber-400 shadow-xs transition">
+            <div class="text-xs font-black uppercase text-orange-900 tracking-wider mb-1">Повільна робота</div>
+            <div class="text-sm font-bold text-slate-900">Заміна жорсткого диска на SSD</div>
+            <div class="text-xs text-slate-500 mt-0.5">Прискорення завантаження та збереження інформації</div>
+          </button>
+
+          <button onclick="selectSymptom('windows')" class="symptom-btn text-left p-4 rounded-xl bg-white border border-amber-200 hover:border-amber-400 shadow-xs transition">
+            <div class="text-xs font-black uppercase text-blue-900 tracking-wider mb-1">Програмні збої</div>
+            <div class="text-sm font-bold text-slate-900">Налагодження системи Windows</div>
+            <div class="text-xs text-slate-500 mt-0.5">Встановлення драйверів та видалення вірусів</div>
+          </button>
+
+          <button onclick="selectSymptom('screen')" class="symptom-btn text-left p-4 rounded-xl bg-white border border-amber-200 hover:border-amber-400 shadow-xs transition">
+            <div class="text-xs font-black uppercase text-emerald-900 tracking-wider mb-1">Механічні пошкодження</div>
+            <div class="text-sm font-bold text-slate-900">Заміна екрана, клавіатури, корпусу</div>
+            <div class="text-xs text-slate-500 mt-0.5">Ремонт петель та заміна розбитих деталей</div>
+          </button>
+
+          <button onclick="selectSymptom('power')" class="symptom-btn text-left p-4 rounded-xl bg-white border border-amber-200 hover:border-amber-400 shadow-xs transition">
+            <div class="text-xs font-black uppercase text-stone-900 tracking-wider mb-1">Апаратні поломки</div>
+            <div class="text-sm font-bold text-slate-900">Діагностика несправностей плати</div>
+            <div class="text-xs text-slate-500 mt-0.5">Ремонт ланцюгів живлення та паяння</div>
+          </button>
+
+          <button onclick="selectSymptom('consoles')" class="symptom-btn text-left p-4 rounded-xl bg-white border border-amber-200 hover:border-amber-400 shadow-xs transition">
+            <div class="text-xs font-black uppercase text-purple-900 tracking-wider mb-1">Ігрові консолі</div>
+            <div class="text-sm font-bold text-slate-900">Чистка та ремонт приставок</div>
+            <div class="text-xs text-slate-500 mt-0.5">PlayStation 5 / PS4, Xbox та інші</div>
+          </button>
+
+        </div>
+
+        <!-- SOLUTION CARD -->
+        <div id="solutionBox" class="bg-white rounded-2xl p-6 sm:p-8 border-2 border-amber-300 shadow-sm">
+          <div class="grid md:grid-cols-12 gap-6 items-center">
+            <div class="md:col-span-8 space-y-2">
+              <span class="text-[11px] font-black uppercase tracking-wider text-amber-900 bg-amber-100 px-2 py-0.5 rounded" id="solBadge">
+                Ремонт та профілактика
+              </span>
+              <h3 class="text-xl sm:text-2xl font-black text-slate-950" id="solTitle">
+                Чистка системи охолодження та заміна термопасти високої якості
+              </h3>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed" id="solDesc">
+                Повне розбирання системи охолодження, видалення спресованого пилу, заміна термопасти та термопрокладок на найкращі матеріали високої якості.
+              </p>
+              <div class="text-xs font-semibold text-slate-700 pt-2" id="solMeta">
+                Локація: м. Обухів, вул. Київська, 113/3 • Телефони: 098-552-05-00, 099-146-21-00
+              </div>
+            </div>
+            <div class="md:col-span-4 bg-amber-50/70 p-5 rounded-xl border border-amber-200 text-center space-y-2">
+              <span class="text-xs font-bold text-slate-500 uppercase block">Огляд та погодження:</span>
+              <span class="text-base font-black text-amber-950 block">Вартість називається ДО ремонту</span>
+              <a href="tel:+380985520500" class="block w-full py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs transition">
+                Зателефонувати: 098-552-05-00
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REAL METRICS (Without emojis) -->
+    <section class="py-14 bg-white border-b border-amber-200/60">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center max-w-xl mx-auto mb-8">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-950">Реальні показники до та після чистки</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="p-5 rounded-xl bg-amber-50/40 border border-amber-200 text-center">
+            <span class="text-xs font-bold text-slate-500 uppercase block mb-1">Температура процесора</span>
+            <div class="text-2xl font-black text-slate-900 my-1"><span class="text-rose-700">86°C</span> → <span class="text-emerald-700">44°C</span></div>
+            <p class="text-xs text-slate-600">Вентилятор перестає шуміти, процесор захищений від перегріву.</p>
+          </div>
+          <div class="p-5 rounded-xl bg-amber-50/40 border border-amber-200 text-center">
+            <span class="text-xs font-bold text-slate-500 uppercase block mb-1">Запуск системи (SSD)</span>
+            <div class="text-2xl font-black text-slate-900 my-1"><span class="text-rose-700">3 хв 40 с</span> → <span class="text-emerald-700">9 секунд</span></div>
+            <p class="text-xs text-slate-600">Швидкий запуск робочих програм та збереження інформації.</p>
+          </div>
+          <div class="p-5 rounded-xl bg-amber-50/40 border border-amber-200 text-center">
+            <span class="text-xs font-bold text-slate-500 uppercase block mb-1">Збереження інформації</span>
+            <div class="text-2xl font-black text-emerald-700 my-1">100%</div>
+            <p class="text-xs text-slate-600">Всі особисті файли залишаються в повній безпеці.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS MARQUEE (50 reviews, rating 4.7) -->
+    <section class="py-16 bg-amber-50/40 border-b border-amber-200/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 mb-8 text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+          Рейтинг 4.7 на основі відгуків Google
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-950 mt-2">Відгуки жителів міста Обухів</h2>
+        <p class="text-xs text-slate-500 mt-1">3 лінії відгуків (наведіть курсор для паузи).</p>
+      </div>
+      <div class="space-y-3">
+        <div class="marquee-wrapper"><div id="marqueeRow1" class="marquee-row-left"></div></div>
+        <div class="marquee-wrapper"><div id="marqueeRow2" class="marquee-row-right"></div></div>
+        <div class="marquee-wrapper"><div id="marqueeRow3" class="marquee-row-left"></div></div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center max-w-2xl mx-auto space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-900 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">Локація та зв'язок</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-950">Салон-магазин «Ідеал» в Обухові</h2>
+        <p class="text-sm font-extrabold text-slate-900">вул. Київська, 113/3</p>
+        <p class="text-xs text-slate-600">Графік: Пн-Пт 10:00-17:00, Сб 10:00-16:00, Нд 10:00-15:00</p>
+        <div class="flex justify-center flex-wrap gap-3 pt-2">
+          <a href="tel:+380985520500" class="px-4 py-2 rounded-lg bg-amber-500 text-white font-bold text-xs shadow-xs">Номер майстра: 098-552-05-00</a>
+          <a href="tel:+380991462100" class="px-4 py-2 rounded-lg bg-slate-900 text-white font-bold text-xs shadow-xs">Номер майстра: 099-146-21-00</a>
+          <a href="https://www.facebook.com/ideal.komp.uteri/" target="_blank" class="px-4 py-2 rounded-lg bg-blue-100 text-blue-900 font-bold text-xs">Facebook</a>
+          <a href="https://www.instagram.com/salon_magazin_ideal/" target="_blank" class="px-4 py-2 rounded-lg bg-pink-100 text-pink-900 font-bold text-xs">Instagram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 text-slate-400 py-6 text-xs text-center border-t border-slate-800">
+    <span>© 2026 Салон-магазин «Ідеал» • м. Обухів, вул. Київська, 113/3 • 098-552-05-00, 099-146-21-00</span>
+  </footer>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/reviews-data.js"></script>
+  <script src="assets/js/kokonut-motion.js"></script>
+  <script>
+    const symptoms = {
+      overheat: {
+        badge: "Чистка системи охолодження",
+        title: "Повна чистка від пилу та заміна термопасти високої якості",
+        desc: "Розбираємо систему охолодження, знімаємо спресований пил з радіатора, наносимо термопасту високої якості. Зниження шуму кулера та перегріву."
+      },
+      slow: {
+        badge: "Модернізація (апгрейд)",
+        title: "Заміна жорсткого диска на SSD зі збереженням інформації",
+        desc: "Встановлюємо швидкий SSD диск замість старого повільного накопичувача. Вся ваша інформація повністю зберігається."
+      },
+      windows: {
+        badge: "Програмне забезпечення",
+        title: "Налагодження системи Windows та видалення вірусів",
+        desc: "Встановлення та точне налагодження системи Windows, фірмових драйверів, очищення від вірусів та шпигунського ПЗ."
+      },
+      screen: {
+        badge: "Заміна компонентів",
+        title: "Заміна екрана, клавіатури та ремонт корпусних деталей",
+        desc: "Заміна розбитих матриць, клавіатур після залиття, відновлення петель та кріплень корпусу ноутбука."
+      },
+      power: {
+        badge: "Апаратний ремонт",
+        title: "Діагностика несправностей плати та відновлення живлення",
+        desc: "Визначення причини чому пристрій не вмикається, ремонт ланцюгів живлення, паяння роз'ємів."
+      },
+      consoles: {
+        badge: "Ігрові консолі",
+        title: "Чистка та ремонт консолей (PS5 Pro / PS4, Xbox та ін.)",
+        desc: "Професійне обслуговування системи охолодження будь-яких поколінь ігрових консолей із заміною термопасти."
+      }
+    };
+    function selectSymptom(k) {
+      const s = symptoms[k];
+      if (!s) return;
+      document.getElementById('solBadge').textContent = s.badge;
+      document.getElementById('solTitle').textContent = s.title;
+      document.getElementById('solDesc').textContent = s.desc;
+    }
+  </script>
+</body>
+</html>

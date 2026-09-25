@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>«Ідеал» ремонт комп'ютерної техніки • Київська область, м. Обухів, вул. Київська, 113/3</title>
+  <meta name="description" content="Ремонт комп'ютерної техніки «Ідеал»: Київська область, м. Обухів, вул. Київська, 113/3. Чистка та ремонт ноутбуків, ПК та ігрових консолей. Досвід • Якість • Швидкість. Номер майстра: 098-552-05-00.">
+  
+  <script>
+    try {
+      if (localStorage.getItem('ideal_theme') === 'dark' || (!localStorage.getItem('ideal_theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+    } catch(e) {}
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/marquee-theme.css">
+</head>
+<body class="bg-[#fffdfa] dark:bg-slate-950 text-slate-800 dark:text-slate-100 antialiased flex flex-col justify-between min-h-screen selection:bg-amber-200">
+
+  <!-- TOP BAR (ПЕРЕЛИВАЮЧИЙ АНІМОВАНИЙ ГРАДІЄНТ) -->
+  <div class="top-bar-shimmer text-white py-2 px-4 text-xs font-bold tracking-wide transition-colors shadow-xs">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-[11px] sm:text-xs">
+      
+      <!-- Перемикач теми з ефектом краплі -->
+      <button id="themeToggleBtn" class="px-2.5 py-1 rounded-md bg-black/20 hover:bg-black/35 text-white text-[11px] font-bold transition flex items-center gap-1.5 cursor-pointer shadow-xs shrink-0" title="Перемкнути темну / світлу тему">
+        <svg id="themeIconMoon" class="w-3.5 h-3.5 fill-current" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+        <svg id="themeIconSun" class="w-3.5 h-3.5 fill-current hidden" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path></svg>
+        <span id="themeToggleText">Темна тема</span>
+      </button>
+
+      <span class="text-white/40">|</span>
+      <span class="uppercase tracking-widest font-black shrink-0">ДОСВІД • ЯКІСТЬ • ШВИДКІСТЬ</span>
+
+      <span class="text-white/40">|</span>
+      <span class="bg-black/25 px-2 py-0.5 rounded text-[11px] font-black uppercase tracking-wide shrink-0">Стаж більше 20 років</span>
+
+      <span class="text-white/40">|</span>
+      <span class="shrink-0">Київська область, м. Обухів, вул. Київська, 113/3</span>
+
+      <span class="text-white/40">|</span>
+      <span class="shrink-0">Графік: Пн-Пт 10:00-17:00, Сб 10:00-16:00, Нд 10:00-15:00</span>
+
+      <span class="text-white/40">|</span>
+      <span class="bg-black/25 px-2 py-0.5 rounded text-[11px] font-black shrink-0">Рейтинг 4.7</span>
+
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white dark:bg-slate-900 border-b border-amber-200/80 dark:border-slate-800 shadow-xs sticky top-0 z-40 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 py-3 sm:py-2.5 grid grid-cols-1 sm:grid-cols-3 items-center gap-4 sm:gap-2">
+      
+      <!-- Зліва: Соціальні мережі -->
+      <div class="flex items-center justify-center order-2 sm:order-1 gap-3">
+        <a href="https://www.facebook.com/ideal.komp.uteri/" target="_blank" class="px-4 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300 text-xs font-bold transition border border-blue-200 dark:border-blue-900 hover:bg-blue-100 shadow-xs">
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/salon_magazin_ideal/" target="_blank" class="px-4 py-1.5 rounded-lg bg-pink-50 dark:bg-pink-950/60 text-pink-800 dark:text-pink-300 text-xs font-bold transition border border-pink-200 dark:border-pink-900 hover:bg-pink-100 shadow-xs">
+          Instagram
+        </a>
+      </div>
+
+      <!-- По центру: Логотип -->
+      <div class="flex justify-center order-1 sm:order-2">
+        <a href="#" class="shrink-0 group" title="«Ідеал» ремонт комп'ютерної техніки">
+          <img src="assets/images/logo_ideal_transparent.png" alt="«Ідеал» ремонт комп'ютерної техніки" class="w-48 sm:w-56 h-auto object-contain dark:drop-shadow-[0_0_12px_rgba(255,255,255,0.85)] group-hover:scale-105 transition-transform duration-300">
+        </a>
+      </div>
+
+      <!-- Справа: Номер та адреса -->
+      <div class="flex flex-col items-center justify-center order-3 gap-1.5 text-center">
+        <a href="tel:+380985520500" class="px-6 py-1.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-extrabold text-xs transition shadow-xs">
+          098-552-05-00
+        </a>
+        <a href="https://maps.app.goo.gl/dNcocqsM4D2SYwVM7" target="_blank" rel="noopener noreferrer" class="px-3 py-1 rounded-lg bg-amber-50 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300 text-[10px] sm:text-[11px] font-bold transition border border-amber-200 dark:border-amber-900 hover:bg-amber-100 flex items-center gap-1 shadow-xs">
+          <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <span>м. Обухів, вул. Київська, 113/3</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    
+    <!-- HERO: ТЕКСТ + 4 КРОКИ ЗЛІВА (НОМЕР ПО ЦЕНТРУ З КРАПЛЕЮ-ПІДКАЗКОЮ), КАРТА З МАРШРУТОМ СПРАВА ДО КНОПКИ -->
+    <section id="heroSection" class="py-10 md:py-14 bg-gradient-to-b from-amber-50/70 to-white dark:from-slate-900 dark:to-slate-950 border-b border-amber-200/60 dark:border-slate-800 transition-colors">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+          
+          <!-- Ліва частина: опис, 4 кроки, номер по центру з краплею -->
+          <div class="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div class="inline-block px-3 py-1 rounded-md bg-amber-100 dark:bg-amber-950/70 text-amber-950 dark:text-amber-300 text-xs font-bold uppercase tracking-wider mb-3.5 border border-amber-300 dark:border-amber-800">
+                КИЇВСЬКА ОБЛАСТЬ, м. ОБУХІВ • ВУЛ. КИЇВСЬКА, 113/3
+              </div>
+
+              <h1 class="text-3xl sm:text-4xl lg:text-[44px] font-black text-slate-950 dark:text-white tracking-tight leading-[1.15] mb-3.5">
+                ЧИСТКА І РЕМОНТ НОУТБУКІВ ТА КОМП'ЮТЕРІВ!
+              </h1>
+
+              <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base mb-6 leading-relaxed font-normal">
+                Професійна чистка та ремонт для стабільної роботи вашої техніки. «Ідеал» ремонт комп'ютерної техніки (Київська обл., м. Обухів, вул. Київська, 113/3).
+              </p>
+
+              <!-- 4 STEPS -->
+              <div class="grid sm:grid-cols-2 gap-3 mb-5">
+                <div class="step-card p-3 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-800 shadow-xs">
+                  <span class="w-6 h-6 rounded bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 font-bold flex items-center justify-center text-xs mb-1.5">1</span>
+                  <h4 class="text-xs font-bold text-slate-900 dark:text-white">Прийом техніки</h4>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Київська обл., м. Обухів, вул. Київська, 113/3.</p>
+                </div>
+                <div class="step-card p-3 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-800 shadow-xs">
+                  <span class="w-6 h-6 rounded bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 font-bold flex items-center justify-center text-xs mb-1.5">2</span>
+                  <h4 class="text-xs font-bold text-slate-900 dark:text-white">Діагностика</h4>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Огляд майстром у вашій присутності.</p>
+                </div>
+                <div class="step-card p-3 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-800 shadow-xs">
+                  <span class="w-6 h-6 rounded bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 font-bold flex items-center justify-center text-xs mb-1.5">3</span>
+                  <h4 class="text-xs font-bold text-slate-900 dark:text-white">Узгодження робіт</h4>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Фіксуємо вартість до початку ремонту.</p>
+                </div>
+                <div class="step-card p-3 rounded-xl bg-white dark:bg-slate-900 border border-amber-200 dark:border-slate-800 shadow-xs">
+                  <span class="w-6 h-6 rounded bg-amber-100 dark:bg-amber-950/70 text-amber-900 dark:text-amber-300 font-bold flex items-center justify-center text-xs mb-1.5">4</span>
+                  <h4 class="text-xs font-bold text-slate-900 dark:text-white">Видача пристрою</h4>
+                  <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5">Особиста перевірка та оплата за результат.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- НОМЕР ПІД КРОКАМИ ПО ЦЕНТРУ З ВСПЛИВАШКОЮ-КРАПЛЕЮ «зателефонуй мені!» -->
+            <div class="flex justify-center w-full pt-1 pb-1">
+              <div class="relative group inline-block">
+                
+                <!-- Вспливашка у формі краплі -->
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:-translate-y-2 pointer-events-none transition-all duration-300 ease-out z-30">
+                  <div class="relative bg-slate-900 dark:bg-white text-white dark:text-slate-900 text-[11px] font-black px-3 py-1 rounded-full shadow-lg whitespace-nowrap flex items-center gap-1 border border-amber-400/40">
+                    <span>зателефонуй мені!</span>
+                    <!-- Хвостик-крапелька -->
+                    <div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-slate-900 dark:bg-white rotate-45 border-r border-b border-amber-400/30"></div>
+                  </div>
+                </div>
+
+                <a href="tel:+380985520500" class="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs transition shadow-md hover:shadow-lg inline-flex items-center gap-2 transform group-hover:scale-[1.02] active:scale-95 duration-200">
+                  <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                  <span>Номер майстра: 098-552-05-00</span>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- Права частина: Google Карта за точними координатами, що закінчується біля номера майстра -->
+          <div class="lg:col-span-5 flex flex-col justify-between">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 border border-amber-200 dark:border-slate-800 shadow-sm flex flex-col h-full justify-between">
+              
+              <div class="flex items-center justify-between pb-2.5 mb-2.5 border-b border-amber-100 dark:border-slate-800">
+                <div>
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-800 dark:text-amber-400 block">Локація магазину</span>
+                  <p class="text-xs font-black text-slate-950 dark:text-white">Київська область, м. Обухів, вул. Київська, 113/3</p>
+                </div>
+                <span class="text-[10px] text-slate-500 dark:text-slate-400 bg-amber-50 dark:bg-slate-800 px-2 py-0.5 rounded border border-amber-200/60 dark:border-slate-700 font-semibold">
+                  «Ідеал» ремонт комп'ютерної техніки
+                </span>
+              </div>
+
+              <!-- Карта з гео-точкою 50.12767003964575, 30.6511834338945 -->
+              <div class="relative w-full rounded-xl overflow-hidden border border-amber-200 dark:border-slate-700 flex-grow min-h-[220px]">
+                <iframe
+                  src="https://maps.google.com/maps?q=50.12767003964575,30.6511834338945&hl=uk&z=17&output=embed"
+                  class="absolute inset-0 w-full h-full border-0"
+                  loading="lazy"
+                  allowfullscreen=""
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Геолокація салону Ідеал в Обухові">
+                </iframe>
+              </div>
+
+              <!-- Кнопка прокласти маршрут на Google Maps -->
+              <div class="pt-3">
+                <a href="https://maps.app.goo.gl/dNcocqsM4D2SYwVM7" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-extrabold text-xs transition shadow-xs flex items-center justify-center gap-2">
+                  <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                  <span>Прокласти маршрут на Google Maps</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES LIST -->
+    <section id="servicesSection" class="py-14 bg-white dark:bg-slate-950 border-b border-amber-200/60 dark:border-slate-800 transition-colors">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="mb-10 text-center max-w-xl mx-auto">
+          <span class="text-xs uppercase font-extrabold text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/70 px-3 py-1 rounded-full border border-amber-300 dark:border-amber-800">КИЇВСЬКА ОБЛАСТЬ, м. ОБУХІВ, ВУЛ. КИЇВСЬКА, 113/3</span>
+          <h2 class="text-2xl sm:text-3xl font-black text-slate-950 dark:text-white mt-2">Наші послуги</h2>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Діагностика несправностей</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Перевірка стану техніки та виявлення причин збоїв.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Ремонт ноутбуків та ПК</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Виявлення та усунення несправностей.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Ремонт системи охолодження</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Заміна термопасти високої якості та вентиляторів.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Чистка та ремонт ігрових консолей</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Обслуговування PlayStation 5, PlayStation 4, Xbox та інших моделей.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Заміна корпусних деталей</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Ремонт петель кришки та відновлення кріплень.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Заміна жорсткого диска (HDD / SSD)</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Прискорення системи та збереження інформації.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Заміна екрана ноутбука</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Встановлення нових матриць будь-яких розмірів.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Заміна клавіатури</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Заміна клавіатур після залиття або зносу.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Видалення вірусів</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Очищення від шкідливого ПЗ та рекламних блокувальників.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Модернізація (апгрейд)</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Заміна комплектуючих, збільшення об'єму оперативної пам'яті та інше.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Налагодження системи Windows</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Оптимізація та налаштування стабільної роботи системи, оновлення офіційних драйверів.</p>
+          </div>
+          <div class="service-card p-4 rounded-xl bg-[#fffdfa] dark:bg-slate-900 border border-amber-200 dark:border-slate-800">
+            <h4 class="text-xs font-bold text-slate-900 dark:text-white mb-1">Збереження інформації</h4>
+            <p class="text-[11px] text-slate-600 dark:text-slate-400">Дбайливе збереження важливих файлів та архівів.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviewsSection" class="py-16 bg-amber-50/40 dark:bg-slate-900/40 border-b border-amber-200/70 dark:border-slate-800 overflow-hidden transition-colors">
+      <div class="max-w-6xl mx-auto px-4 mb-8 text-center">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-900 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/70 px-3 py-1 rounded-full border border-amber-300 dark:border-amber-800">
+          РЕЙТИНГ 4.7 НА ОСНОВІ ВІДГУКІВ GOOGLE
+        </span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-950 dark:text-white mt-2">Відгуки клієнтів</h2>
+      </div>
+      <div class="space-y-3">
+        <div class="marquee-wrapper"><div id="marqueeRow1" class="marquee-row-left"></div></div>
+        <div class="marquee-wrapper"><div id="marqueeRow2" class="marquee-row-right"></div></div>
+        <div class="marquee-wrapper"><div id="marqueeRow3" class="marquee-row-left"></div></div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section id="contactsSection" class="py-16 bg-white dark:bg-slate-950 transition-colors">
+      <div class="max-w-6xl mx-auto px-4 text-center max-w-xl mx-auto space-y-4">
+        <span class="text-xs font-bold uppercase tracking-wider text-amber-900 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/70 px-3 py-1 rounded-full border border-amber-300 dark:border-amber-800">ЛОКАЦІЯ ТА ЗВ'ЯЗОК</span>
+        <h2 class="text-2xl sm:text-3xl font-black text-slate-950 dark:text-white">«Ідеал» ремонт комп'ютерної техніки</h2>
+        <p class="text-sm font-bold text-slate-900 dark:text-white">Київська область, м. Обухів, вул. Київська, 113/3</p>
+        
+        <!-- Графік окремими рядками -->
+        <div class="text-xs text-slate-600 dark:text-slate-400 font-medium space-y-1 pt-1">
+          <div class="font-bold text-slate-800 dark:text-slate-200">Графік:</div>
+          <div>Пн-Пт: 10:00 – 17:00</div>
+          <div>Сб: 10:00 – 16:00</div>
+          <div>Нд: 10:00 – 15:00</div>
+        </div>
+
+        <div class="pt-3 flex justify-center flex-wrap gap-2.5">
+          <a href="tel:+380985520500" class="px-5 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-xs transition">
+            098-552-05-00
+          </a>
+          <a href="https://maps.app.goo.gl/dNcocqsM4D2SYwVM7" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-lg bg-amber-100 hover:bg-amber-200 dark:bg-amber-950/70 dark:text-amber-300 text-amber-900 font-bold text-xs transition border border-amber-300 dark:border-amber-800 flex items-center gap-1.5">
+            <svg class="w-3.5 h-3.5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            <span>Карта та маршрут</span>
+          </a>
+          <a href="https://www.facebook.com/ideal.komp.uteri/" target="_blank" class="px-4 py-2.5 rounded-lg bg-blue-100 hover:bg-blue-200 dark:bg-blue-950/70 dark:text-blue-300 text-blue-900 font-bold text-xs transition">
+            Facebook
+          </a>
+          <a href="https://www.instagram.com/salon_magazin_ideal/" target="_blank" class="px-4 py-2.5 rounded-lg bg-pink-100 hover:bg-pink-200 dark:bg-pink-950/70 dark:text-pink-300 text-pink-900 font-bold text-xs transition">
+            Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-slate-900 dark:bg-black text-slate-400 py-6 text-xs text-center border-t border-slate-800 dark:border-slate-900 transition-colors">
+    <span>© 2026 «Ідеал» ремонт комп'ютерної техніки • Київська область, м. Обухів, вул. Київська, 113/3 • Номер майстра: 098-552-05-00</span>
+  </footer>
+
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/reviews-data.js"></script>
+  <script src="assets/js/kokonut-motion.js"></script>
+</body>
+</html>

@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Салон-магазин «Ідеал» Обухів | Комп'ютерний сервіс та ремонт</title>
+  <meta name="description" content="Чесний комп'ютерний сервіс та салон-магазин «Ідеал» в Обухові (вул. Київська, 113/3). Чистка ноутбуків, встановлення Windows, ремонт ПК. Діагностика при вас, погодження вартості до початку робіт.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#fffbeb',
+              100: '#fef3c7',
+              200: '#fde68a',
+              500: '#f59e0b',
+              600: '#d97706',
+              700: '#b45309',
+              orange: '#ea580c',
+              orangeHover: '#c2410c',
+              yellow: '#eab308',
+              slate: '#0f172a',
+              cream: '#fffdfa',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Local Custom CSS for Marquee & Orange Theme -->
+  <link rel="stylesheet" href="assets/css/marquee-theme.css">
+</head>
+<body class="bg-[#fffdfa] text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-950 flex flex-col justify-between min-h-screen">
+
+  <!-- TOP VARIANT SWITCHER BAR (Для вибору найкращого стилю) -->
+  <div class="variant-switcher sticky top-0 z-50 py-2 px-4 text-xs font-semibold text-slate-700">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2 py-0.5 rounded-full bg-amber-500 text-white font-bold text-[10px] uppercase tracking-wider">Перегляд</span>
+        <span class="text-slate-600">Оберіть варіант дизайну сайту:</span>
+      </div>
+      <div class="flex items-center gap-1.5 sm:gap-2">
+        <a href="variant-editorial.html" class="px-3 py-1 rounded-lg bg-amber-500 text-white font-bold shadow-xs">Варіант 1: Стриманий Craft</a>
+        <a href="variant-kokonut.html" class="px-3 py-1 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-900 transition">Варіант 2: Інтерактивний Kokonut</a>
+        <a href="variant-local.html" class="px-3 py-1 rounded-lg bg-amber-100 hover:bg-amber-200 text-amber-900 transition">Варіант 3: Теплий Обухів</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOP INFO BAR -->
+  <div class="bg-amber-50/70 border-b border-amber-200/60 py-2 px-4 text-xs">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-3 text-slate-600 font-medium">
+      <div class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span class="font-bold text-slate-800">Салон-магазин «Ідеал» відкритий:</span>
+        <span>м. Обухів, вул. Київська, 113/3</span>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-amber-800 font-bold bg-amber-100/80 px-2 py-0.5 rounded">
+          ✓ Безкоштовний огляд техніки при вас
+        </span>
+        <span class="hidden sm:inline text-emerald-800 font-semibold">
+          🛡️ Оплата тільки за результат
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="bg-white/95 backdrop-blur-md border-b border-amber-200/80 shadow-xs">
+    <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-500 to-orange-600 text-white flex items-center justify-center font-black text-xl shadow-md shadow-amber-500/25">
+          І
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-xl font-extrabold tracking-tight text-slate-900" data-bind="brandName">ІДЕАЛ</span>
+            <span class="text-[11px] font-bold text-amber-900 bg-amber-100 px-2 py-0.5 rounded border border-amber-200">
+              Салон-магазин & Сервіс
+            </span>
+          </div>
+          <p class="text-xs text-slate-500">Комп'ютерна допомога • Обухів, Київська 113/3</p>
+        </div>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+        <a href="#services" class="hover:text-amber-600 transition">Послуги сервісу</a>
+        <a href="#reviews" class="hover:text-amber-600 transition">Відгуки (50+)</a>
+        <a href="#consultation" class="hover:text-amber-600 transition">Консультація майстра</a>
+        <a href="#contacts" class="hover:text-amber-600 transition">Контакти та адреса</a>
+      </nav>
+
+      <!-- Fast Actions -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Viber -->
+        <a href="#" data-bind-href="viber" class="px-3 py-2 rounded-xl bg-[#7360f2]/10 hover:bg-[#7360f2]/20 text-[#614ee0] border border-[#7360f2]/20 transition flex items-center gap-1.5 text-xs font-bold" title="Написати у Viber">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.78 14.16c-.63-.38-1.5-.78-2.31-1.15-.45-.2-.93-.11-1.28.24l-.84.85c-.32.32-.82.38-1.22.14-1.23-.74-2.5-1.95-3.32-3.14-.26-.39-.21-.9.12-1.23l.8-.8c.36-.36.46-.84.26-1.3-.35-.8-.74-1.68-1.1-2.32-.34-.6-.97-.67-1.47-.35L7.7 5.92c-.63.4-.95 1.13-.77 1.83 1.07 4.19 4.3 7.55 8.44 8.76.73.21 1.48-.1 1.9-.71l1.1-1.57c.36-.53.25-1.23-.3-1.57z"/></svg>
+          <span class="hidden sm:inline">Viber</span>
+        </a>
+
+        <!-- Telegram -->
+        <a href="#" data-bind-href="telegram" target="_blank" class="px-3 py-2 rounded-xl bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 transition flex items-center gap-1.5 text-xs font-bold" title="Написати у Telegram">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+          <span class="hidden sm:inline">Telegram</span>
+        </a>
+
+        <!-- Call -->
+        <a href="#" data-bind-href="phoneRaw" class="px-4 py-2 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-extrabold text-xs flex items-center gap-1.5 shadow-md shadow-amber-500/20 transition">
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          <span data-bind="phoneDisplay">+38 (098) 552 05 00</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <main class="flex-grow">
+    
+    <section class="bg-gradient-to-b from-amber-50/70 via-[#fffdfa] to-white pt-12 pb-16 md:pt-16 md:pb-20 border-b border-amber-200/60">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7">
+            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100/90 text-amber-900 border border-amber-300/80 text-xs font-bold mb-5">
+              <span>📍 м. Обухів • вул. Київська, 113/3</span>
+              <span>•</span>
+              <span>Майстерня поруч із вами</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950 leading-[1.18] mb-5">
+              Ремонт, професійна чистка та налаштування техніки в Обухові
+            </h1>
+
+            <p class="text-slate-600 text-base sm:text-lg mb-8 leading-relaxed max-w-2xl font-normal">
+              Салон-магазин <strong class="text-slate-900 font-bold">«Ідеал»</strong>. 
+              Якщо ноутбук сильно шумить кулером, гріється, повільно запускається або злетіла система — приносьте. 
+              <span class="text-amber-900 font-semibold bg-amber-100/60 px-1.5 py-0.5 rounded">Діагностика безкоштовна, вартість називаємо до ремонту, а всі деталі вже на місці.</span>
+            </p>
+
+            <!-- Feature Cards without Prices -->
+            <div class="grid sm:grid-cols-2 gap-4 mb-8">
+              
+              <div class="bg-white p-5 rounded-2xl border-2 border-amber-200/80 shadow-xs hover:border-amber-400 transition card-amber-hover">
+                <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-lg mb-2.5 font-bold">
+                  ❄️
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Повна чистка від пилу</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Зняття спресованого пилового валянка з кулера, заміна термопасти на преміум Arctic MX-4. Ноутбук перестає шуміти та скидати частоти.
+                </p>
+                <div class="mt-3 text-[11px] font-bold text-amber-800">
+                  ⚡ Готовність від 1–2 годин
+                </div>
+              </div>
+
+              <div class="bg-white p-5 rounded-2xl border-2 border-amber-200/80 shadow-xs hover:border-amber-400 transition card-amber-hover">
+                <div class="w-9 h-9 rounded-xl bg-orange-100 text-orange-700 flex items-center justify-center text-lg mb-2.5 font-bold">
+                  💻
+                </div>
+                <h3 class="text-base font-bold text-slate-900 mb-1">Windows «Під ключ»</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  Чисте встановлення Windows 10/11, всі фірмові драйвери, офісні програми. Повне збереження ваших сімейних фотографій і файлів.
+                </p>
+                <div class="mt-3 text-[11px] font-bold text-orange-800">
+                  🔒 100% збереження особистих даних
+                </div>
+              </div>
+
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a href="#consultation" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-extrabold text-sm shadow-md shadow-amber-500/20 transition flex items-center gap-2">
+                <span>Підібрати послугу онлайн</span>
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+              </a>
+              <button class="open-booking-modal px-6 py-3.5 rounded-xl bg-white hover:bg-amber-50 text-slate-800 font-bold text-sm border border-amber-300 shadow-xs transition" data-service="Запис до майстра на огляд">
+                Записатися до майстра
+              </button>
+            </div>
+
+            <!-- Trust Points -->
+            <div class="mt-8 pt-6 border-t border-amber-200/60 flex flex-wrap items-center gap-y-2 gap-x-6 text-xs text-slate-600">
+              <div class="flex items-center gap-1.5 font-semibold text-slate-700">
+                <span class="text-emerald-600 font-extrabold text-sm">✓</span> Безкоштовна діагностика
+              </div>
+              <div class="flex items-center gap-1.5 font-semibold text-slate-700">
+                <span class="text-emerald-600 font-extrabold text-sm">✓</span> Деталі на складі в Обухові
+              </div>
+              <div class="flex items-center gap-1.5 font-semibold text-slate-700">
+                <span class="text-emerald-600 font-extrabold text-sm">✓</span> Вартість узгоджуємо ДО ремонту
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Visual Trust Card -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-3xl p-6 sm:p-7 border-2 border-amber-200 shadow-md">
+              <div class="flex items-center justify-between pb-3 border-b border-amber-100 mb-4">
+                <div class="flex items-center gap-2">
+                  <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                  <span class="text-xs font-bold text-amber-900 uppercase tracking-wide">Салон-Магазин «Ідеал»</span>
+                </div>
+                <span class="text-xs text-slate-500 font-medium">Обухів</span>
+              </div>
+
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Чому не варто відкладати сервіс?</h3>
+              <p class="text-xs text-slate-600 mb-5 leading-relaxed">
+                Якщо ноутбук перегрівається, відеокарта та процесор працюють на межі згоряння. Своєчасна чистка за 1-2 години рятує техніку від заміни дорогої материнської плати.
+              </p>
+
+              <div class="space-y-3">
+                <div class="p-3.5 rounded-xl bg-amber-50/80 border border-amber-200/70 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-xl">🔥</span>
+                    <div>
+                      <div class="text-xs font-bold text-slate-900">Сильний нагрів та шум кулера</div>
+                      <div class="text-[11px] text-slate-500">Чистка радіатора + паста Arctic MX-4</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-amber-700 bg-white px-2.5 py-1 rounded-md border border-amber-200 shadow-xs">1–2 год</span>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-orange-50/70 border border-orange-200/70 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-xl">⚡</span>
+                    <div>
+                      <div class="text-xs font-bold text-slate-900">Повільна робота або синій екран</div>
+                      <div class="text-[11px] text-slate-500">Встановлення SSD + чиста Windows</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-orange-700 bg-white px-2.5 py-1 rounded-md border border-orange-200 shadow-xs">Прискорення x5</span>
+                </div>
+
+                <div class="p-3.5 rounded-xl bg-emerald-50/70 border border-emerald-200/70 flex items-center justify-between">
+                  <div class="flex items-center gap-3">
+                    <span class="text-xl">🛠️</span>
+                    <div>
+                      <div class="text-xs font-bold text-slate-900">Апаратна поломка чи залиття</div>
+                      <div class="text-[11px] text-slate-500">Точна діагностика плати та паяння</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-emerald-800 bg-white px-2.5 py-1 rounded-md border border-emerald-200 shadow-xs">Огляд при вас</span>
+                </div>
+              </div>
+
+              <!-- Contact box -->
+              <div class="mt-5 p-4 rounded-xl bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 flex items-center justify-between gap-3">
+                <div>
+                  <div class="text-xs font-bold text-slate-900">Запитати поради майстра:</div>
+                  <div class="text-xs text-amber-800 font-extrabold mt-0.5" data-bind="phoneDisplay">+38 (098) 552 05 00</div>
+                </div>
+                <a href="#" data-bind-href="phoneRaw" class="px-3.5 py-2 rounded-lg bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs shadow-xs transition">
+                  Подзвонити
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: SERVICES (БЕЗ ЦІН — АКЦЕНТ НА ЯКІСТЬ ТА РЕЗУЛЬТАТ) -->
+    <section id="services" class="py-16 md:py-20 bg-white border-b border-amber-200/60">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <span class="text-xs uppercase font-extrabold tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+            Послуги майстерні «Ідеал»
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950 mt-3 mb-3">
+            Чесне обслуговування техніки без зайвих накруток
+          </h2>
+          <p class="text-slate-600 text-sm">
+            Майстер спочатку проводить огляд, показує реальну проблему та називає точну фіксовану вартість. Ви платите тільки після перевірки готового комп'ютера.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- CARD 1: Cleaning -->
+          <div class="bg-[#fffdfa] rounded-2xl p-6 border-2 border-amber-200/80 flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">❄️</span>
+                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">Основна послуга</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Повна чистка від пилу та заміна термопасти</h3>
+              <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                Повне розбирання, видалення спресованого пилу з решіток кулерів, змащування вентиляторів та нанесення високоефективної термопасти Arctic MX-4.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Зниження температури до -25°C
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Зникає рев вентилятора
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Захист відеочіпа від перегріву та виходу з ладу
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Термін: 1–2 години
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-amber-200/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-amber-900">Оцінка після огляду</span>
+              <button class="open-booking-modal px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition" data-service="Чистка ноутбука/ПК від пилу">
+                Замовити огляд
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 2: Windows -->
+          <div class="bg-[#fffdfa] rounded-2xl p-6 border-2 border-amber-200/80 flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">💻</span>
+                <span class="text-xs font-bold text-orange-800 bg-orange-100 px-2.5 py-0.5 rounded-full">Під ключ</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Встановлення Windows «Під ключ»</h3>
+              <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                Чиста Windows 10/11 без рекламного мотлоху. Встановлюємо всі рідні драйвери виробника під ваше залізо, звук, Wi-Fi та пакет офісних програм.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-600 font-bold">✓</span> Повне збереження фото, документів та архівів
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-600 font-bold">✓</span> Всі фірмові драйвери та оновлення
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-600 font-bold">✓</span> Word, Excel, кодеки, архіватор, браузер
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-orange-600 font-bold">✓</span> Оптимізація автозапуску для швидкості
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-amber-200/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-orange-900">Фіксуємо до початку</span>
+              <button class="open-booking-modal px-4 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 text-white font-bold text-xs transition" data-service="Встановлення Windows під ключ">
+                Замовити огляд
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 3: SSD Upgrade -->
+          <div class="bg-[#fffdfa] rounded-2xl p-6 border-2 border-amber-200/80 flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">🚀</span>
+                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full">Прискорення</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Апгрейд на швидкий SSD диск</h3>
+              <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                Заміна старого повільного HDD на ультрашвидкісний SSD. Комп'ютер завантажуватиметься за 10 секунд замість 5 хвилин і літатиме у програмах.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Надійні SSD Kingston/Crucial на нашому складі
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Клонування всієї системи без втрати налаштувань
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Друге життя для ноутбуків віком 5–10 років
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-amber-200/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-700">Диски є в магазині</span>
+              <button class="open-booking-modal px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition" data-service="Апгрейд на швидкий SSD">
+                Обрати послугу
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 4: Diagnostics -->
+          <div class="bg-[#fffdfa] rounded-2xl p-6 border-2 border-amber-200/80 flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">🔍</span>
+                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full">Безкоштовно</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Діагностика та апаратний ремонт</h3>
+              <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                Якщо пристрій не вмикається, розхитане гніздо зарядки, екран розбитий або всередину потрапила кава/вода.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-bold">✓</span> Діагностика 0 грн за умови подальшого ремонту
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-bold">✓</span> Паяння роз'ємів Type-C, живлення, USB
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-700 font-bold">✓</span> Ультразвукова чистка після залиття рідиною
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-amber-200/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-emerald-700">0 грн при ремонті</span>
+              <button class="open-booking-modal px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition" data-service="Діагностика та ремонт плати">
+                Записатися
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 5: Custom PC -->
+          <div class="bg-[#fffdfa] rounded-2xl p-6 border-2 border-amber-200/80 flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">⚙️</span>
+                <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full">Під замовлення</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Збірка ПК та продаж периферії</h3>
+              <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                Підбір деталей під ваш бюджет для навчання, офісу або ігор. В магазині завжди є мишки, клавіатури, навушники, кабелі та флешки.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Деталі за оптовими цінами нашого магазину
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Акуратний кабель-менеджмент
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Стрес-тести AIDA64 / FurMark
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-amber-200/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-700">Все під ключ</span>
+              <button class="open-booking-modal px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition" data-service="Збірка ПК під замовлення">
+                Замовити збірку
+              </button>
+            </div>
+          </div>
+
+          <!-- CARD 6: Security -->
+          <div class="bg-[#fffdfa] rounded-2xl p-6 border-2 border-amber-200/80 flex flex-col justify-between hover:border-amber-400 hover:shadow-md transition">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="text-3xl">🛡️</span>
+                <span class="text-xs font-bold text-slate-700 bg-slate-100 px-2.5 py-0.5 rounded-full">Безпека</span>
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">Видалення вірусів та відновлення даних</h3>
+              <p class="text-xs text-slate-600 mb-4 leading-relaxed">
+                Очищення від шпигунських програм, настирливої реклами у браузері, відновлення видалених сімейних архівів та фото з флешок і дисків.
+              </p>
+              
+              <ul class="space-y-2 text-xs text-slate-700 mb-6">
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Знезараження без форматування диска
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Відновлення сімейних архівів та дипломів
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">✓</span> Надійний захист для безпечного інтернету
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-4 border-t border-amber-200/60 flex items-center justify-between">
+              <span class="text-xs font-bold text-slate-700">Конфіденційно</span>
+              <button class="open-booking-modal px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white font-bold text-xs transition" data-service="Видалення вірусів та захист">
+                Замовити огляд
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: 3-ROW RUNNING MARQUEE REVIEWS (50 ВІДГУКІВ) -->
+    <section id="reviews" class="py-16 md:py-24 bg-amber-50/40 border-b border-amber-200/70 overflow-hidden">
+      <div class="max-w-6xl mx-auto px-4 mb-8 text-center">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 font-bold text-xs mb-3 border border-amber-300">
+          <span>⭐ 5.0 на Google Картах</span>
+          <span>•</span>
+          <span>50+ реальних відгуків жителів Обухова</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-950">
+          Що кажуть клієнти про майстерню «Ідеал»
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mt-2 max-w-xl mx-auto">
+          Наведіть курсор мишки на будь-який відгук, щоб зупинити стрічку та спокійно прочитати історію.
+        </p>
+      </div>
+
+      <!-- 3-ROW RUNNING TRACKS -->
+      <div class="space-y-4">
+        
+        <!-- ROW 1: LEFT -->
+        <div class="marquee-wrapper">
+          <div id="marqueeRow1" class="marquee-row-left">
+            <!-- Filled via JS from REVIEWS_DATA -->
+          </div>
+        </div>
+
+        <!-- ROW 2: RIGHT -->
+        <div class="marquee-wrapper">
+          <div id="marqueeRow2" class="marquee-row-right">
+            <!-- Filled via JS from REVIEWS_DATA -->
+          </div>
+        </div>
+
+        <!-- ROW 3: LEFT -->
+        <div class="marquee-wrapper">
+          <div id="marqueeRow3" class="marquee-row-left">
+            <!-- Filled via JS from REVIEWS_DATA -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Leave review button -->
+      <div class="max-w-6xl mx-auto px-4 mt-8 text-center">
+        <span class="text-xs text-slate-500">Маєте досвід ремонту в «Ідеал»? Будемо раді вашому відгуку на Google Картах або Facebook!</span>
+      </div>
+    </section>
+
+    <!-- SECTION: INTERACTIVE CONSULTATION BUILDER (БЕЗ ЦІН!) -->
+    <section id="consultation" class="py-16 md:py-20 bg-white border-b border-amber-200/60">
+      <div class="max-w-4xl mx-auto px-4">
+        
+        <div class="text-center max-w-xl mx-auto mb-10">
+          <span class="text-xs uppercase font-extrabold tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+            Швидка консультація
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950 mt-3 mb-2">
+            Підберіть послуги та запитайте майстра
+          </h2>
+          <p class="text-slate-600 text-xs sm:text-sm">
+            Оберіть ваш пристрій та проблеми — система сформує готове повідомлення для Telegram або Viber майстру.
+          </p>
+        </div>
+
+        <div class="bg-[#fffdfa] rounded-3xl p-6 sm:p-8 border-2 border-amber-200 shadow-md">
+          
+          <!-- Step 1: Device -->
+          <div class="mb-7">
+            <label class="block text-xs uppercase font-bold tracking-wider text-slate-500 mb-3">1. Оберіть ваш пристрій:</label>
+            <div class="grid grid-cols-3 gap-3">
+              <label class="cursor-pointer">
+                <input type="radio" name="diagDevice" value="Ноутбук" data-name="Ноутбук" checked class="peer sr-only">
+                <div class="p-3.5 sm:p-4 rounded-xl bg-white border-2 border-amber-200 peer-checked:border-amber-500 peer-checked:bg-amber-50/80 text-center transition">
+                  <span class="text-2xl block mb-1">💻</span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-800">Ноутбук</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="diagDevice" value="Стаціонарний ПК" data-name="ПК (системник)" class="peer sr-only">
+                <div class="p-3.5 sm:p-4 rounded-xl bg-white border-2 border-amber-200 peer-checked:border-amber-500 peer-checked:bg-amber-50/80 text-center transition">
+                  <span class="text-2xl block mb-1">🖥️</span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-800">ПК (системник)</span>
+                </div>
+              </label>
+
+              <label class="cursor-pointer">
+                <input type="radio" name="diagDevice" value="Моноблок" data-name="Моноблок" class="peer sr-only">
+                <div class="p-3.5 sm:p-4 rounded-xl bg-white border-2 border-amber-200 peer-checked:border-amber-500 peer-checked:bg-amber-50/80 text-center transition">
+                  <span class="text-2xl block mb-1">📺</span>
+                  <span class="text-xs sm:text-sm font-bold text-slate-800">Моноблок</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 2: Checkboxes -->
+          <div class="mb-7">
+            <label class="block text-xs uppercase font-bold tracking-wider text-slate-500 mb-3">2. Що потрібно зробити?</label>
+            <div class="space-y-2.5">
+              
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-white hover:bg-amber-50/60 border border-amber-200 cursor-pointer transition">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" checked class="diag-checkbox w-5 h-5 rounded text-amber-600 border-amber-300 focus:ring-0" data-title="Повна чистка від пилу та заміна термопасти">
+                  <div>
+                    <span class="text-xs sm:text-sm font-bold text-slate-900 block">Повна чистка від пилу та заміна термопасти</span>
+                    <span class="text-[11px] text-slate-500">Змащування кулера, паста Arctic MX-4, усунення перегріву</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">1–2 години</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-white hover:bg-amber-50/60 border border-amber-200 cursor-pointer transition">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" checked class="diag-checkbox w-5 h-5 rounded text-amber-600 border-amber-300 focus:ring-0" data-title="Встановлення Windows 10/11 + збереження всіх фото і файлів">
+                  <div>
+                    <span class="text-xs sm:text-sm font-bold text-slate-900 block">Встановлення Windows «Під ключ»</span>
+                    <span class="text-[11px] text-slate-500">Всі драйвери, програми, збереження ваших фото та документів</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-orange-800 bg-orange-100 px-2 py-0.5 rounded">Безпечно</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-white hover:bg-amber-50/60 border border-amber-200 cursor-pointer transition">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="diag-checkbox w-5 h-5 rounded text-amber-600 border-amber-300 focus:ring-0" data-title="Встановлення швидкого SSD-диска">
+                  <div>
+                    <span class="text-xs sm:text-sm font-bold text-slate-900 block">Апгрейд: встановлення швидкого SSD</span>
+                    <span class="text-[11px] text-slate-500">Прискорення вмикання та роботи системи в 5–7 разів</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Є на складі</span>
+              </label>
+
+              <label class="flex items-center justify-between p-3.5 rounded-xl bg-white hover:bg-amber-50/60 border border-amber-200 cursor-pointer transition">
+                <div class="flex items-center gap-3">
+                  <input type="checkbox" class="diag-checkbox w-5 h-5 rounded text-amber-600 border-amber-300 focus:ring-0" data-title="Діагностика / не вмикається / потрапила вода">
+                  <div>
+                    <span class="text-xs sm:text-sm font-bold text-slate-900 block">Апаратна діагностика (не вмикається / залили)</span>
+                    <span class="text-[11px] text-slate-500">Огляд ланцюгів живлення та материнської плати</span>
+                  </div>
+                </div>
+                <span class="text-xs font-bold text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded">Безкоштовно</span>
+              </label>
+
+            </div>
+          </div>
+
+          <!-- Summary Box -->
+          <div class="p-6 rounded-2xl bg-amber-50 border border-amber-200">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
+              <div>
+                <span class="text-xs font-bold text-amber-900 uppercase tracking-wide block">Обрані послуги:</span>
+                <span class="text-sm font-bold text-slate-900">Готово до надсилання майстру</span>
+              </div>
+              <div class="text-xs text-slate-600">
+                <span class="text-emerald-700 font-bold block">✓ Безкоштовна експрес-діагностика</span>
+                <span>Точна оцінка вартості після огляду при вас</span>
+              </div>
+            </div>
+
+            <div id="diagSelectedList" class="mb-5 space-y-1">
+              <!-- Filled dynamically via JS -->
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-wrap items-center gap-3">
+              <a id="diagSendTelegram" href="#" target="_blank" class="flex-1 min-w-[150px] py-3 px-4 rounded-xl bg-sky-500 hover:bg-sky-600 text-white font-bold text-xs text-center transition flex items-center justify-center gap-1.5 shadow-xs">
+                <span>💬 Запитати у Telegram</span>
+              </a>
+              <a id="diagSendViber" href="#" class="flex-1 min-w-[150px] py-3 px-4 rounded-xl bg-[#7360f2] hover:bg-[#624ee0] text-white font-bold text-xs text-center transition flex items-center justify-center gap-1.5 shadow-xs">
+                <span>🟣 Запитати у Viber</span>
+              </a>
+              <button class="open-booking-modal py-3 px-4 rounded-xl bg-white hover:bg-amber-100/60 text-slate-800 font-bold text-xs border border-amber-300 transition" data-service="Консультація з калькулятора">
+                Передзвоніть мені
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: CONTACTS & SOCIALS -->
+    <section id="contacts" class="py-16 md:py-24 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+          
+          <div class="lg:col-span-6 space-y-6">
+            <div>
+              <span class="text-xs uppercase font-extrabold tracking-wider text-amber-800 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+                Локація та зв'язок
+              </span>
+              <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-950 mt-3 mb-3">
+                Чекаємо вас у салоні-магазині «Ідеал» в Обухові
+              </h2>
+              <p class="text-slate-600 text-sm leading-relaxed">
+                Приносьте техніку у зручний час. Майстер проведе огляд при вас і одразу зорієнтує за строками та варіантами вирішення.
+              </p>
+            </div>
+
+            <div class="space-y-3.5">
+              
+              <!-- Address -->
+              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 flex items-start gap-3.5">
+                <div class="text-2xl">📍</div>
+                <div>
+                  <div class="text-xs text-slate-500 font-bold uppercase">Адреса майстерні:</div>
+                  <div class="text-base font-extrabold text-slate-900" data-bind="address">м. Обухів, вул. Київська, 113/3</div>
+                  <div class="text-xs text-amber-800 font-semibold mt-0.5">Салон-магазин «Ідеал» (комп'ютери, сервіс, аксесуари)</div>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 flex items-start gap-3.5">
+                <div class="text-2xl">📞</div>
+                <div>
+                  <div class="text-xs text-slate-500 font-bold uppercase">Телефон для довідок та дзвінків:</div>
+                  <a href="#" data-bind-href="phoneRaw" class="text-lg font-black text-amber-900 hover:text-amber-700 transition" data-bind="phoneDisplay">
+                    +38 (098) 552 05 00
+                  </a>
+                  <div class="text-xs text-slate-500 mt-0.5">Прямий номер майстра</div>
+                </div>
+              </div>
+
+              <!-- Social Links: Real Facebook & Instagram -->
+              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 flex items-start gap-3.5">
+                <div class="text-2xl">🌐</div>
+                <div>
+                  <div class="text-xs text-slate-500 font-bold uppercase">Ми в соціальних мережах:</div>
+                  <div class="flex flex-wrap items-center gap-2.5 mt-2">
+                    <a href="https://www.instagram.com/salon_magazin_ideal/" target="_blank" data-bind-href="instagram" class="px-3 py-1.5 rounded-lg bg-pink-100 hover:bg-pink-200 text-pink-900 text-xs font-bold transition flex items-center gap-1.5 border border-pink-200">
+                      <span>📸 Instagram @salon_magazin_ideal</span>
+                    </a>
+                    <a href="https://www.facebook.com/ideal.komp.uteri/" target="_blank" data-bind-href="facebook" class="px-3 py-1.5 rounded-lg bg-blue-100 hover:bg-blue-200 text-blue-900 text-xs font-bold transition flex items-center gap-1.5 border border-blue-200">
+                      <span>👥 Facebook ideal.komp.uteri</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Working Hours -->
+              <div class="p-4 rounded-2xl bg-amber-50/60 border border-amber-200 flex items-start gap-3.5">
+                <div class="text-2xl">🕒</div>
+                <div>
+                  <div class="text-xs text-slate-500 font-bold uppercase">Графік роботи:</div>
+                  <div class="text-xs font-bold text-slate-900 mt-1">Понеділок – П'ятниця: 09:00 – 19:00</div>
+                  <div class="text-xs font-bold text-slate-900">Субота: 10:00 – 17:00</div>
+                  <div class="text-xs text-slate-500 mt-0.5">Неділя: за домовленістю / черговий режим</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Quick Request Form -->
+          <div class="lg:col-span-6">
+            <div class="bg-[#fffdfa] rounded-3xl p-6 sm:p-8 border-2 border-amber-200 shadow-md">
+              <span class="text-xs uppercase font-extrabold tracking-wider text-amber-800">Запис на сервіс</span>
+              <h3 class="text-xl font-bold text-slate-900 mt-1 mb-2">Залишити заявку або запитання</h3>
+              <p class="text-xs text-slate-600 mb-6">
+                Вкажіть ваш номер телефону, і майстер зв'яжеться з вами протягом 15 хвилин для консультації.
+              </p>
+
+              <form id="bookingForm" class="space-y-4">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Ваше ім'я:</label>
+                  <input type="text" name="name" required placeholder="Наприклад, Віталій" class="w-full px-4 py-2.5 rounded-xl bg-white border border-amber-200 text-slate-900 text-sm focus:border-amber-500 focus:outline-none transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Номер телефону:</label>
+                  <input type="tel" name="phone" required placeholder="+38 (0XX) XXX-XX-XX" class="w-full px-4 py-2.5 rounded-xl bg-white border border-amber-200 text-slate-900 text-sm focus:border-amber-500 focus:outline-none transition">
+                </div>
+
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 mb-1">Що турбує або яка послуга потрібна?</label>
+                  <input type="text" name="service" placeholder="Наприклад: Чистка ноутбука від пилу, гріється або зависає" class="w-full px-4 py-2.5 rounded-xl bg-white border border-amber-200 text-slate-900 text-sm focus:border-amber-500 focus:outline-none transition">
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-extrabold text-sm shadow-md shadow-amber-500/20 transition">
+                  Надіслати заявку майстру
+                </button>
+
+                <p class="text-[11px] text-center text-slate-500">
+                  🔒 Ваші контакти використовуються виключно для зв'язку з майстром.
+                </p>
+              </form>
+
+              <!-- Success Alert -->
+              <div id="bookingSuccess" class="hidden p-6 text-center space-y-2 bg-emerald-50 rounded-2xl border border-emerald-200">
+                <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 mx-auto flex items-center justify-center text-lg font-bold">✓</div>
+                <h4 class="text-base font-bold text-slate-900">Заявку успішно прийнято!</h4>
+                <p class="text-xs text-slate-600">Майстер зв'яжеться з вами найближчим часом. Дякуємо!</p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-8 border-t border-slate-800 text-xs">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2 text-slate-300">
+        <span class="font-bold text-white text-sm" data-bind="brandName">ІДЕАЛ</span>
+        <span>•</span>
+        <span>Салон-магазин & Сервіс</span>
+        <span>•</span>
+        <span data-bind="city">Обухів</span>
+      </div>
+      <div>
+        <span>Чистка ПК & Ноутбуків • Встановлення Windows • Апгрейд SSD • Ремонт плат</span>
+      </div>
+      <div class="text-slate-500">
+        <span>© 2026 Салон-магазин «Ідеал». вул. Київська, 113/3, Обухів.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY BOTTOM BAR -->
+  <div class="sm:hidden fixed bottom-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-t border-amber-200 px-4 py-2.5 flex items-center justify-between gap-2 shadow-lg">
+    <a href="#" data-bind-href="phoneRaw" class="flex-1 py-2.5 rounded-xl bg-amber-500 text-white font-extrabold text-xs flex items-center justify-center gap-1.5 shadow-xs">
+      <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      <span>Подзвонити</span>
+    </a>
+    <a href="#" data-bind-href="telegram" target="_blank" class="flex-1 py-2.5 rounded-xl bg-sky-50 text-sky-700 border border-sky-200 font-bold text-xs flex items-center justify-center gap-1">
+      <span>Telegram</span>
+    </a>
+    <a href="#" data-bind-href="viber" class="flex-1 py-2.5 rounded-xl bg-[#7360f2]/10 text-[#614ee0] border border-[#7360f2]/20 font-bold text-xs flex items-center justify-center gap-1">
+      <span>Viber</span>
+    </a>
+  </div>
+
+  <!-- POPUP MODAL -->
+  <div id="bookingModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-xs items-center justify-center p-4">
+    <div class="bg-white rounded-3xl p-6 sm:p-7 max-w-md w-full relative border-2 border-amber-200 shadow-xl">
+      <button id="closeModalBtn" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-2 text-xl font-bold">✕</button>
+
+      <div class="mb-4">
+        <span class="text-xs uppercase font-extrabold text-amber-800 tracking-wider">Швидкий запис на ремонт</span>
+        <h3 class="text-lg font-bold text-slate-900 mt-0.5">Салон-магазин «Ідеал» • Обухів</h3>
+        <p class="text-xs text-slate-500 mt-1">Вул. Київська, 113/3. Залиште номер, і майстер передзвонить.</p>
+      </div>
+
+      <form id="modalForm" class="space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Ваше ім'я:</label>
+          <input type="text" required placeholder="Олександр" class="w-full px-3.5 py-2.5 rounded-xl bg-amber-50/50 border border-amber-200 text-slate-900 text-xs focus:border-amber-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Номер телефону:</label>
+          <input type="tel" required placeholder="+38 (0XX) XXX-XX-XX" class="w-full px-3.5 py-2.5 rounded-xl bg-amber-50/50 border border-amber-200 text-slate-900 text-xs focus:border-amber-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Що потрібно зробити?</label>
+          <input type="text" name="service" placeholder="Чистка ноутбука або Windows" class="w-full px-3.5 py-2.5 rounded-xl bg-amber-50/50 border border-amber-200 text-slate-900 text-xs focus:border-amber-500 focus:outline-none">
+        </div>
+        <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-xs transition shadow-xs">
+          Підтвердити запис
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="assets/js/anime.min.js"></script>
+  <script src="assets/js/site-config.js"></script>
+  <script src="assets/js/reviews-data.js"></script>
+  <script src="assets/js/kokonut-motion.js"></script>
+</body>
+</html>
